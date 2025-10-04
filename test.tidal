@@ -1,0 +1,45 @@
+
+
+d1 $ sound "bd bd hh bd sn bd"
+
+d1 $ sound "[bd bd sn:5] [bd sn:3]"
+d1 $ sound "[bd bd] bd sn:5 [bd sn:3]" # vowel "a"
+-- have sequences within sequences
+d1 $ sound "[[bd bd] bd sn:5] [bd sn:3]"
+d1 $ sound "bd*4"
+
+* play drum:3 twice but do so fast 
+d2 $ sound "drum:3 *2"
+d2 $ silence
+d3 $ sound "drum:3 !4"
+-- plays these two things in the same cycle 
+d3 $ sound "drum:6 ~ drum:6 ~ drum:6 ~ drum:6 ~"
+d3 $ silence
+
+d1 $ sound "<bd> <sd> <bd [sn:5 sn:5]>"
+
+-- randomly play bd:0 vs bd:1
+d4 $ sound "[bd:0|bd:1]"
+
+d5 $ sound "<[sn,cp]>"
+
+Play three bass drums and a snare:
+
+
+hush
+-- change the cycles per second
+setcps 0.75
+solo1
+
+-- add a vowel effect
+d1 $ sound "drum ~ drum ~" # vowel "o"
+d2 $ sound "~ drum ~ drum" # vowel "u"
+
+d1 $ n "0 1 0 3" # sound "arpy"
+d1 $ sound "{drum bd hh bd, can can:2 can:3 can:4 can:2}"
+d1 $ sound "bd(3,8)"
+
+d1 $ sound "bev"
+
+d1 $ sound "GoodEnough ~" # cut 1
+hush
