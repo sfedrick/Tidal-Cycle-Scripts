@@ -43,3 +43,10 @@ d1 $ sound "bev"
 
 d1 $ sound "GoodEnough ~" # cut 1
 hush
+d1 $ sound "clap bd(3,8)"
+d2 $ s "<arpy,arpy:2>(3,8)" #crush 2 # vowel e
+
+d3 $ sound "cpu bd(2,4)" # vowel a
+setcps 0.5
+draw $ "A B(3,8)"
+hush
