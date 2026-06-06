@@ -175,6 +175,7 @@ d1 $ qtrigger 1 $ jux ((|- n "12") . rev) $ struct "t(5,8,<0 4>)" $ n "<g'maj b'
 
 -- You can get a list of all the chords like this:
 import Sound.Tidal.Chords
+:set -package tidal-core
 
 chordList
 
